@@ -1,0 +1,718 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+.navbar {
+  background: #000;
+  padding: 10px;
+  text-align: center;
+}
+.navbar ul {
+  list-style: none;
+}
+.navbar li {
+  display: inline-block;
+  margin: 0 15px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.navbar a:hover {
+  color: orange;
+}
+.hero {
+  text-align: center;
+  background: #000;
+  color: orange;
+  padding: 50px 20px;
+}
+.hero img {
+  width: 200px; /* Aumenta el ancho del logo */
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 2.5rem; /* O el valor que quieras */
+  margin-top: 20px;
+  color: orange;
+}
+.conocenos {
+  background: #111;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+.conocenos img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.galeria img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* SERVICIOS SECTION */
+.servicios {
+  background: url('../IMAGENES/Patron.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 50px 20px;
+  text-align: center;
+}
+.servicios-contenido {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 15px;
+  display: inline-block;
+  max-width: 1000px;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  animation: fadeSlide 1.5s ease-out;
+}
+.servicios-contenido h2,
+.servicios-contenido p {
+  display: inline-block;
+  background-color: rgba(255,255,255,0.85);
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
+}
+.servicio-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+.servicio-lista a {
+  padding: 10px 20px;
+  border: 2px solid black;
+  background: #fff3;
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.servicio-lista a:hover {
+  background-color: black;
+  color: orange;
+}
+
+footer.contacto {
+  background: white;
+  color: black;
+  text-align: center;
+  padding: 50px 20px;
+}
+footer img {
+  max-width: 100px;
+  margin: 10px auto;
+}
+footer .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 400px;
+}
+input, button {
+  padding: 10px;
+  font-size: 16px;
+}
+button {
+  background: orange;
+  border: none;
+  color: black;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+button:hover {
+  background: black;
+  color: orange;
+}
+@media screen and (min-width: 768px) {
+  .galeria {
+    flex-direction: row;
+  }
+  .galeria img {
+    width: 45%;
+  }
+  footer .info {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeSlide {
+  0% { opacity: 0; transform: translateY(80px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.hero img,
+.conocenos img,
+footer img {
+  width: 120px;
+}
+
+/* Contact layout improvements */
+footer .contacto-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 40px;
+}
+footer .info div {
+  width: 40%;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  footer .info {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .info div {
+    width: 100%;
+  }
+}
+
+
+/* Modern "Conócenos" section */
+.conocenos-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #121212;
+  color: #fff;
+  padding: 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.conocenos-section .img-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.conocenos-section .img-container img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+.conocenos-section .img-container img:hover {
+  transform: scale(1.05);
+}
+
+.conocenos-section .text-container {
+  text-align: center;  
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.conocenos-section .text-container h2 {
+  text-align: center;  
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffa500;
+}
+
+.logo-img {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.conocenos-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  text-align: left;
+  padding-left: 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+
+.conocenos-list li {
+  margin-bottom: 12px;
+}
+
+.top-logo-section {
+  text-align: center;
+  padding: 20px 0 30px 0;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.header-logo {
+  width: 3000px;
+  margin-bottom: 20px;
+}
+
+.slogan {
+  color: #ffa500;
+  font-size: 8rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.top-logo-section {
+  background-color: #000;
+}
+
+.servicios-descripcion {
+  background-color: #000;
+  padding: 40px 20px;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: justify;
+}
+
+.servicios-texto {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-contacto {
+  background-color: #fff;
+  padding: 40px 20px;
+  border-top: 2px solid #ccc;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.footer-info {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.footer-info h2 {
+  color: #f5a100;
+  margin-top: 10px;
+}
+
+.logo-footer {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.datos-contacto {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-left: 50px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.servicios-destacados {
+  background-color: #f5ab00;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.servicios-destacados h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.grid-servicios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.servicio {
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicio img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.servicio p {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Reescribir estilos con tamaños mayores */
+.servicios-destacados {
+  background-color: #f5ab00;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.servicios-destacados h2 {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.grid-servicios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.servicio {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicio img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 1.5rem;
+}
+
+.servicio p {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.servicios-visual {
+  background-color: #f5ab00;
+  text-align: center;
+  padding: 2rem 0 0;
+}
+
+.servicios-visual h2 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.img-servicios {
+  width: 60%;
+  height: auto;
+  display: block;
+}
+
+/* Reducir padding en sección de servicios */
+.servicios-visual {
+  padding: 1rem 0 0;
+}
+
+.servicios-visual h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Reducir aún más la sección de servicios */
+.servicios-visual {
+  padding: 1rem 0;
+}
+
+.servicios-visual h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.img-servicios {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.top-logo-section {
+  background-color: #000;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.header-logo {
+  width: 650px; /* ¡Aquí puedes agrandar más! */
+  max-width: 100%;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.slogan {
+  color: orange;
+  font-size: 3rem; /* Aumenta o ajusta según prefieras */
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.sidebar-nav {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 10px;
+}
+
+.sidebar-nav a {
+  display: block;
+  background: white;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar-nav a:hover {
+  background: orange;
+  color: white;
+}
+
+.conocenos-section .text-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ============================
+   ESTILOS RESPONSIVE
+   ============================ */
+@media (max-width: 768px) {
+  .img-servicios {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .header-logo {
+    width: 180px;
+  }
+
+  .slogan {
+    font-size: 1.2rem;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .conocenos-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .img-container img {
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .text-container {
+    padding: 20px;
+  }
+
+  .conocenos-list {
+    text-align: left;
+    list-style-position: inside;
+  }
+
+  .servicios-destacados h2,
+  .servicios-visual h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  nav.sidebar-nav {
+    display: none;
+  }
+
+  .top-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .top-nav ul li a {
+    font-size: 1rem;
+    padding: 4px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicios-destacados {
+    padding: 3rem 1rem;
+  }
+
+  .servicios-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  .servicios-visual img {
+    width: 80px;
+    height: auto;
+  }
+
+  .servicios-visual p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .img-servicios {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .img-servicios {
+    width: 400px !important;
+    height: auto !important;
+  }
+}
+/* Contact section styles */
+.contacto-elegante {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.contacto-izquierda {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-robot {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  object-fit: contain;
+}
+
+.contacto-derecha {
+  flex: 1 1 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-contacto {
+  width: 100px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.contacto-derecha h2 {
+  font-size: 24px;
+  color: #f5a400;
+  margin-bottom: 20px;
+}
+
+.info-contacto {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  text-align: left;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.info-contacto h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.info-contacto p {
+  font-size: 14px;
+  margin: 0;
+}

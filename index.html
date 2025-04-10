@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AXIS Ingeniería</title>
+  <link rel="stylesheet" href="CSS/ESTILOS_FINAL.CSS" />
+  <style>
+    /* Agregar estilo básico para top nav */
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000;
+      padding: 10px 30px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .top-nav img {
+      height: 50px;
+    }
+
+    .top-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .top-nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background-color: #fff;
+      color: #000;
+      padding: 6px 12px;
+      border-radius: 10px;
+    }
+
+    .top-nav ul li a:hover {
+      background-color: orange;
+      color: white;
+    }
+
+    body {
+      margin-top: 80px; /* espacio para menú fijo */
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('a[href^="#"]').forEach(ancla => {
+        ancla.addEventListener("click", function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+          });
+        });
+      });
+    });
+  </script>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+
+  .sidebar-nav {
+    position: fixed;
+    top: 28%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 1000;
+  }
+</style>
+</head>
+<body>
+  <div id="inicio"></div>
+
+  
+<!-- NAV -->
+<nav class="sidebar-nav">
+  <ul>
+    <li><a href="#inicio">INICIO</a></li>
+    <li><a href="#conocenos">CONÓCENOS</a></li>
+    <li><a href="#servicios">SERVICIOS</a></li>
+    <li><a href="#contacto">CONTACTO</a></li>
+  </ul>
+</nav>
+
+<div class="top-logo-section">
+
+  <img src="IMAGENES/IMAGOTIPO AXIS - SIN FONDO (ORANGE & WHITE).png" alt="AXIS Logo" class="header-logo">
+  <p class="slogan">Ingeniería especializada en Proyectos de Automatización Industrial</p>
+</div>
+
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    
+<section class="conocenos-section" id="conocenos">
+  <div class="img-container">
+    <img src="IMAGENES/FOTO LINEA 01.png" alt="Línea 01">
+    <img src="IMAGENES/FOTO LINEA 02.png" alt="Línea 02">
+  </div>
+  <div class="text-container">
+    <img src="IMAGENES/IMAGOTIPO AXIS - SIN FONDO (ORANGE & WHITE).png" alt="Logo AXIS" class="logo-img" />
+    
+<h2>Conócenos</h2>
+<ul class="conocenos-list">
+  <li>AXIS es fundada en 2025, sin embargo nuestro equipo trabaja unido desde hace más de 10 años en proyectos de ingeniería complejos.</li>
+  <li>Especializados en proyectos de automoción, BodyInWhite, y cualquier otro tipo de proyecto de automatización.</li>
+  <li>Nuestra metodología de trabajo se basa en un modelo cooperativo: compromiso, transparencia y enfoque colaborativo.</li>
+  <li>Nuestra meta: ayudar a nuestros clientes a conseguir sus objetivos durante las distintas fases del proyecto.</li>
+</ul>
+
+  </div>
+</section>
+
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  
+
+<section class="servicios-visual">
+  <h2>Servicios</h2>
+  <img id="servicios" src="IMAGENES/BOTONES_SERVICIOS.png" alt="Servicios" class="img-servicios" />
+</section>
+<section class="servicios-descripcion">
+  <div class="servicios-texto">
+    <p>
+      En AXIS, ofrecemos soluciones integrales en ingeniería de maquinaria industrial. Podemos intervenir en cada fase del proyecto,
+      desde el análisis inicial para identificar oportunidades de mejora en tu sistema de producción, hasta el diseño y desarrollo de
+      maquinaria a medida utilizando las tecnologías más avanzadas. Nuestro enfoque está en optimizar la eficiencia y la productividad,
+      integrando sistemas de automatización y robótica que se adaptan a las necesidades específicas de cada cliente.
+    </p>
+  </div>
+</section>
+
+  <!-- CONTACTO -->im
+  
+<footer id="contacto">
+<style>footer { background-color: white !important; color: black !important; }</style>  
+<div class="contacto-elegante">
+  <div class="contacto-izquierda">
+    <img src="IMAGENES/ROBOT LAPIZ.png" alt="Robot dibujo técnico" class="img-robot">
+  </div>
+  <div class="contacto-derecha">
+    <img src="IMAGENES/IMAGOTIPO AXIS - SIN FONDO (ORANGE & BLACK).png" alt="Logo Axis" class="logo-contacto">
+    <h2>Contacta con nosotros</h2>
+    <div class="info-contacto">
+      <div>
+        <h4>UBICACIÓN</h4>
+        <p>Calle Seúl 88, N°2B,<br>(entre suelo 3)<br>46900 Torrent (Valencia)</p>
+      </div>
+      <div>
+        <h4>CORREO</h4>
+        <p>info@axis-e.com</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</footer>
+</body>
+</html>
