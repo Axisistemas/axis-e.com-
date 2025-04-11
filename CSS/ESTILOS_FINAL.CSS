@@ -315,6 +315,9 @@ footer .info div {
   line-height: 1.8;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: justify;
+  
+  max-width: 1000px;           /* ancho máximo de texto */
+  margin: 0 auto 20px auto;    /* centrado + separación inferior */
 }
 
 .servicios-texto {
@@ -716,3 +719,67 @@ footer .info div {
   font-size: 14px;
   margin: 0;
 }
+.footer-legal {
+  background-color: #000 !important;
+  border: none;
+  margin: 0;
+  padding: 20px 10px;
+  color: #eee;
+}
+
+.footer-contenido {
+  color: #f5a400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-contenido a {
+  color: #f5a400;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-contenido a:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor principal */
+.servicios-separados {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0;
+  background-color: #f5ab00;
+}
+
+/* Imágenes por defecto */
+.servicios-separados img {
+  width: 300px;
+  max-width: 90%;
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+/* Ajustes personalizados */
+.ajuste-diseno {
+  margin-top: 0px; /* 👈 Sube un poco la imagen de Diseño */
+}
+
+.ajuste-simulacion {
+  margin-top: 0px; /* 👈 Sube más la imagen de Simulación */
+}
+
+/* Hover animado */
+.servicios-separados img:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+
+
