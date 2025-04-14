@@ -778,6 +778,88 @@ footer .info div {
   transform: scale(1.05);
 }
 
+.servicios-separados {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px 0;
+  background-color: #f5ab00;
+  text-align: center;
+}
+
+.servicio-item {
+  width: 300px;
+  max-width: 90%;
+  color: white;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.servicio-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.servicio-item img:hover {
+  transform: scale(1.05);
+}
+
+.servicio-item p {
+  margin-top: 0px;
+  font-size: 1.1rem;
+}
+
+.logo-img,
+.logo-contacto {
+  width: 120px;  /* o el tamaño que ya tiene .logo-img */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.servicios-visual h2,
+.servicio-item p {
+  font-size: 1.5rem; /* mismo tamaño para ambos */
+}
+
+.servicio-item {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.servicios-visual h2 {
+  font-size: 2rem; /* Título más grande */
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  margin-bottom: 20px;
+}
+
+.servicio-item p {
+  font-size: 2; /* Tamaño uniforme para los textos de los botones */
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+section h2,
+.contacto-derecha h2 {
+  font-size: 2rem; /* Solo ajusta el tamaño */
+}
+
+.servicios-descripcion p,
+.conocenos-list li {
+  font-size: 1.3rem; /* Tamaño uniforme para ambos bloques */
+}
+
+
+
 
 
 
