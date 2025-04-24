@@ -858,6 +858,20 @@ section h2,
   font-size: 1.3rem; /* Tamaño uniforme para ambos bloques */
 }
 
+.servicio-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicio-titulo {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 2rem; /* igual que el título */
+}
+
 
 
 
