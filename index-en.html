@@ -183,7 +183,7 @@
 <footer id="contacto">
 <style>footer { background-color: white !important; color: black !important; }</style>
 <div class="contacto-elegante">
-<div class="contacto-izquierda"><div class="pdf-preview"><iframe loading="lazy" src="DOCUMENTOS/2024_MUESTRA_GRAFICA_EXPONER_EMPRESA_AYUDA_INTEGRACION.pdf#page=1&amp;zoom=page-width" title="Muestra gráfica (PDF)"></iframe><a aria-label="Abrir PDF en una pestaña nueva" class="pdf-overlay" href="DOCUMENTOS/2024_MUESTRA_GRAFICA_EXPONER_EMPRESA_AYUDA_INTEGRACION.pdf" rel="noopener noreferrer" target="_blank"></a></div><img alt="Robot dibujo técnico" class="img-robot" src="IMAGENES/ROBOT LAPIZ.png"/></div>
+<div class="contacto-izquierda"><div class="help-preview"><img src="IMAGENES/AYUDA ESEILS.png" alt="ESEILS help preview" class="help-thumb" id="helpThumb"/></div><img alt="Robot dibujo técnico" class="img-robot" src="IMAGENES/ROBOT LAPIZ.png"/></div>
 <div class="contacto-derecha">
 <img alt="Logo Axis" class="logo-contacto" src="IMAGENES/IMAGOTIPO AXIS - SIN FONDO (ORANGE &amp; BLACK).png"/>
 <h2>Contact Us</h2>
@@ -207,5 +207,51 @@
       <a href="EN/privacy-policy.html" target="_blank">Privacy Policy</a>
     </div>
   </footer>
+
+<!-- HELP MODAL START -->
+<div id="helpModal" class="help-modal" aria-hidden="true">
+  <div class="help-modal-backdrop" id="helpModalBackdrop"></div>
+  <div class="help-modal-dialog" role="dialog" aria-modal="true" aria-label="Help image enlarged">
+    <button type="button" class="help-modal-close" id="helpModalClose" aria-label="Close">×</button>
+    <img src="IMAGENES/AYUDA ESEILS.png" alt="Help image enlarged" class="help-modal-img"/>
+  </div>
+</div>
+<script>
+(function() {
+  var thumb = document.getElementById('helpThumb');
+  var modal = document.getElementById('helpModal');
+  var closeBtn = document.getElementById('helpModalClose');
+  var backdrop = document.getElementById('helpModalBackdrop');
+
+  function openModal() {
+    if (!modal) return;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    if (!modal) return;
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  if (thumb) {
+    thumb.addEventListener('click', function(e) {
+      e.preventDefault();
+      openModal();
+    });
+    thumb.style.cursor = 'zoom-in';
+  }
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (backdrop) backdrop.addEventListener('click', closeModal);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+})();
+</script>
+<!-- HELP MODAL END -->
+
 </body>
 </html>

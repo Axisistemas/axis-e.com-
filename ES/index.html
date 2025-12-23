@@ -171,7 +171,11 @@
 <footer id="contacto">
 <style>footer { background-color: white !important; color: black !important; }</style>
 <div class="contacto-elegante">
-<div class="contacto-izquierda"><div class="pdf-preview"><iframe loading="lazy" src="../DOCUMENTOS/2024_MUESTRA_GRAFICA_EXPONER_EMPRESA_AYUDA_INTEGRACION.pdf#page=1&amp;zoom=page-width" title="Muestra gráfica (PDF)"></iframe><a aria-label="Abrir PDF en una pestaña nueva" class="pdf-overlay" href="../DOCUMENTOS/2024_MUESTRA_GRAFICA_EXPONER_EMPRESA_AYUDA_INTEGRACION.pdf" rel="noopener noreferrer" target="_blank"></a></div><img alt="Robot dibujo técnico" class="img-robot" src="../IMAGENES/ROBOT LAPIZ.png"/></div>
+<div class="contacto-izquierda"><div class="pdf-preview">
+  <a class="help-open" href="../IMAGENES/AYUDA ESEILS.png" aria-label="Ampliar documento">
+    <img class="help-thumb" loading="lazy" src="../IMAGENES/AYUDA ESEILS.png" alt="Documento de ayuda"/>
+  </a>
+</div><img alt="Robot dibujo técnico" class="img-robot" src="../IMAGENES/ROBOT LAPIZ.png"/></div>
 <div class="contacto-derecha">
 <img alt="Logo Axis" class="logo-contacto" src="../IMAGENES/IMAGOTIPO AXIS - SIN FONDO (ORANGE &amp; BLACK).png"/>
 <h2>Contacta con nosotros</h2>
@@ -194,5 +198,51 @@
 <a href="politica.html" target="_blank">Política de protección de datos</a>
 </div>
 </footer>
+
+<!-- Modal: ampliar imagen AYUDA -->
+<div class="help-modal" id="helpModal" aria-hidden="true">
+  <div class="help-modal-backdrop" data-close="1"></div>
+  <div class="help-modal-dialog" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+    <button class="help-modal-close" type="button" aria-label="Cerrar">&times;</button>
+    <img class="help-modal-img" src="../IMAGENES/AYUDA ESEILS.png" alt="Documento de ayuda ampliado"/>
+  </div>
+</div>
+
+<script>
+(function () {
+  const openers = document.querySelectorAll('.help-open');
+  const modal = document.getElementById('helpModal');
+  if (!modal || !openers.length) return;
+
+  const closeBtn = modal.querySelector('.help-modal-close');
+  const backdrop = modal.querySelector('.help-modal-backdrop');
+
+  function openModal() {
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  openers.forEach(a => a.addEventListener('click', function (e) {
+    e.preventDefault();
+    openModal();
+  }));
+
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (backdrop) backdrop.addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+      closeModal();
+    }
+  });
+})();
+</script>
 </body>
 </html>
